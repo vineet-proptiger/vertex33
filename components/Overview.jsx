@@ -118,7 +118,7 @@ const EarlyForm = () => {
 }
 
 const Overview = () => (
-  <section id="overview" style={{ padding: '72px 0', background: '#f5f5f5' }}>
+  <section id="overview" className="py-8 md:py-[72px]" style={{ background: '#f5f5f5' }}>
     <div className="container mx-auto px-4 md:px-8">
       <div className="flex flex-col lg:flex-row gap-10 lg:gap-16 items-start">
 

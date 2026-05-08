@@ -89,7 +89,6 @@ export default function Home() {
         </button>
       </div>
 
-      <div className="h-12 lg:hidden" />
     </main>
   )
 }

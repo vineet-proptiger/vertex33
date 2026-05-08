@@ -572,3 +572,13 @@ footer {
 #downloads {
   background: linear-gradient(160deg, #0C3547 0%, #0E4358 60%, #0A2E3D 100%) !important;
 }
+
+/* ─── Hero image responsive position ────────────────────────── */
+.hero-img {
+  object-position: center bottom;
+}
+@media (max-width: 767px) {
+  .hero-img {
+    object-position: center 60%;
+  }
+}

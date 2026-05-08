@@ -19,7 +19,12 @@ const Hero = ({ setIsOpen }) => {
   return (
     <section
       id="home"
-      className="relative w-full h-[100svh] min-h-[500px] md:min-h-[600px] overflow-hidden pt-0 pb-0 bg-[#0a1a24]"
+      className="relative w-full overflow-hidden"
+      style={{
+        height: '100svh',
+        paddingTop: 0,
+        paddingBottom: 0,
+      }}
     >
       {/* ── Background image carousel ── */}
       {slides.map((src, idx) => (
@@ -36,7 +41,7 @@ const Hero = ({ setIsOpen }) => {
             src={src}
             alt={`Vertex 33 ${idx + 1}`}
             fill
-            className="object-contain md:object-cover object-top md:object-[center_bottom] scale-[1.15] origin-top md:scale-100 md:origin-center"
+            className="object-cover hero-img"
             priority={idx === 0}
             sizes="100vw"
             quality={100}
@@ -149,8 +154,8 @@ const Hero = ({ setIsOpen }) => {
       </div> */}
 
       {/* ── Bottom info bar ── */}
-      <div style={{
-        position: 'absolute', bottom: 0, left: 0, right: 0, zIndex: 5,
+      <div className="bottom-12 lg:bottom-0" style={{
+        position: 'absolute', left: 0, right: 0, zIndex: 5,
       }}>
         {/* USP row */}
         <div style={{

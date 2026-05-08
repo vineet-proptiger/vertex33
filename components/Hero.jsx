@@ -10,10 +10,14 @@ const slides = [heroImages.banner, heroImages.banner2]
 
 const Hero = ({ setIsOpen }) => {
   const [current, setCurrent] = useState(0)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const t = setInterval(() => setCurrent(p => (p + 1) % slides.length), 5000)
-    return () => clearInterval(t)
+    const check = () => setIsMobile(window.innerWidth < 768)
+    check()
+    window.addEventListener('resize', check, { passive: true })
+    return () => { clearInterval(t); window.removeEventListener('resize', check) }
   }, [])
 
   return (
@@ -36,11 +40,28 @@ const Hero = ({ setIsOpen }) => {
             zIndex: 0,
           }}
         >
+          {/* Blurred background fill for mobile (covers empty space around contained image) */}
+          {isMobile && (
+            <div style={{
+              position: 'absolute', inset: 0,
+              backgroundImage: `url(${src})`,
+              backgroundSize: 'cover',
+              backgroundPosition: 'center',
+              filter: 'blur(18px) brightness(0.55)',
+              transform: 'scale(1.08)',
+            }} />
+          )}
           <Image
             src={src}
             alt={`Vertex 33 ${idx + 1}`}
             fill
-            className="object-cover hero-img"
+            className="hero-img"
+            style={{
+              objectFit: isMobile ? 'contain' : 'cover',
+              objectPosition: isMobile ? 'center 30%' : 'center center',
+              transform: isMobile ? 'scale(1.15)' : 'none',
+              transformOrigin: 'center 30%',
+            }}
             priority={idx === 0}
             sizes="100vw"
             quality={100}

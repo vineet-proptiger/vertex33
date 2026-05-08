@@ -59,7 +59,7 @@ const Hero = ({ setIsOpen }) => {
             style={{
               objectFit: isMobile ? 'contain' : 'cover',
               objectPosition: isMobile ? 'center 20%' : 'center center',
-              transform: isMobile ? 'scale(1.35)' : 'none',
+              transform: isMobile ? 'scale(1.6)' : 'none',
               transformOrigin: 'center 20%',
             }}
             priority={idx === 0}

@@ -19,7 +19,7 @@ const Hero = ({ setIsOpen }) => {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden h-[72svh] md:h-[100svh]"
+      className="relative w-full overflow-hidden h-[96svh] md:h-[100svh]"
       style={{
         paddingTop: 0,
         paddingBottom: 0,
@@ -56,7 +56,7 @@ const Hero = ({ setIsOpen }) => {
 
 
       {/* ── Center-bottom text ── */}
-      <div className="absolute left-0 right-0 top-[30%] sm:top-auto sm:bottom-[120px]" style={{
+      <div className="absolute left-0 right-0 bottom-[180px] sm:bottom-[120px]" style={{
         zIndex: 2, textAlign: 'center', padding: '0 16px',
       }}>
         {/* Project Tagline */}
@@ -154,7 +154,7 @@ const Hero = ({ setIsOpen }) => {
       </div> */}
 
       {/* ── Bottom info bar ── */}
-      <div className="-bottom-4 lg:bottom-0" style={{
+      <div className="bottom-0" style={{
         position: 'absolute', left: 0, right: 0, zIndex: 5,
       }}>
         {/* USP row */}
@@ -173,15 +173,15 @@ const Hero = ({ setIsOpen }) => {
           ].map((point, i) => (
             <div key={i} style={{
               display: 'flex', alignItems: 'center', justifyContent: 'center',
-              gap: '8px', padding: '10px 12px',
+              gap: '8px', padding: '14px 12px',
               borderRight: i < 2 ? '1px solid rgba(255,255,255,0.08)' : 'none',
             }}>
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none"
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none"
                 stroke="var(--color-gold)" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M20 6L9 17l-5-5" />
               </svg>
               <span style={{
-                fontFamily: F_SANS, fontSize: 'clamp(10px, 1.5vw, 13px)',
+                fontFamily: F_SANS, fontSize: 'clamp(11px, 1.5vw, 13px)',
                 fontWeight: '600', color: '#ffffff', letterSpacing: '0.02em',
               }}>
                 {point}

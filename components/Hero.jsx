@@ -19,9 +19,8 @@ const Hero = ({ setIsOpen }) => {
   return (
     <section
       id="home"
-      className="relative w-full overflow-hidden"
+      className="relative w-full overflow-hidden h-[72svh] md:h-[100svh]"
       style={{
-        height: '100svh',
         paddingTop: 0,
         paddingBottom: 0,
       }}
@@ -57,7 +56,7 @@ const Hero = ({ setIsOpen }) => {
 
 
       {/* ── Center-bottom text ── */}
-      <div className="absolute left-0 right-0 bottom-[220px] sm:bottom-[120px]" style={{
+      <div className="absolute left-0 right-0 top-[30%] sm:top-auto sm:bottom-[120px]" style={{
         zIndex: 2, textAlign: 'center', padding: '0 16px',
       }}>
         {/* Project Tagline */}
@@ -155,7 +154,7 @@ const Hero = ({ setIsOpen }) => {
       </div> */}
 
       {/* ── Bottom info bar ── */}
-      <div className="bottom-12 lg:bottom-0" style={{
+      <div className="-bottom-4 lg:bottom-0" style={{
         position: 'absolute', left: 0, right: 0, zIndex: 5,
       }}>
         {/* USP row */}

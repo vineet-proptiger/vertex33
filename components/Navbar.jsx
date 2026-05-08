@@ -23,20 +23,27 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 const Navbar = ({ setIsOpen }) => {
   const [mobileOpen, setMobileOpen] = useState(false)
   const [scrolled, setScrolled] = useState(false)
+  const [isMobile, setIsMobile] = useState(false)
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 80)
+    const onResize = () => setIsMobile(window.innerWidth < 1024)
     onScroll()
+    onResize()
     window.addEventListener('scroll', onScroll, { passive: true })
-    return () => window.removeEventListener('scroll', onScroll)
+    window.addEventListener('resize', onResize, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      window.removeEventListener('resize', onResize)
+    }
   }, [])
 
   return (
     <nav
       className="fixed top-0 left-0 right-0 z-50"
       style={{
-        background: (scrolled || mobileOpen) ? 'rgba(13,59,80,0.97)' : 'rgba(13,59,80,0)',
-        borderBottom: (scrolled || mobileOpen) ? '1px solid rgba(196,149,42,0.2)' : '1px solid transparent',
+        background: (scrolled || mobileOpen || isMobile) ? 'rgba(13,59,80,0.97)' : 'rgba(13,59,80,0)',
+        borderBottom: (scrolled || mobileOpen || isMobile) ? '1px solid rgba(196,149,42,0.2)' : '1px solid transparent',
         boxShadow: scrolled ? '0 2px 20px rgba(13,59,80,0.5)' : 'none',
         transition: 'background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease',
       }}

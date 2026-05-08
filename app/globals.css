@@ -582,3 +582,20 @@ footer {
     object-position: center 60%;
   }
 }
+
+/* ─── Hero text background on mobile ────────────────────────── */
+.hero-text-wrap {
+  background: transparent;
+  border-radius: 0;
+  padding: 0 16px;
+}
+@media (max-width: 767px) {
+  .hero-text-wrap {
+    background: rgba(0, 0, 0, 0.45);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 12px;
+    padding: 18px 20px;
+    margin: 0 12px;
+  }
+}

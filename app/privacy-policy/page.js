@@ -28,7 +28,7 @@ export default function PrivacyPolicy() {
 
         <div className="container mx-auto px-4 md:px-8 flex items-center justify-between h-[80px]">
           <Link href="/" className="flex items-center">
-            <img src={logoImages.main} alt={PROJECT_NAME} className="h-28 sm:h-36 w-auto object-contain" style={{ borderRadius: '8px', overflow: 'hidden' }} />
+            <img src={logoImages.main} alt={PROJECT_NAME} className="h-10 sm:h-14 w-auto object-contain" style={{ borderRadius: '8px', overflow: 'hidden' }} />
           </Link>
           <Link
             href="/"

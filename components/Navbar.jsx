@@ -49,7 +49,7 @@ const Navbar = ({ setIsOpen }) => {
             <img
               src={logoImages.main}
               alt="Vertex 33"
-              style={{ height: 'clamp(115px, 30vw, 160px)', width: 'auto', objectFit: 'contain', maxWidth: '600px' }}
+              style={{ height: 'clamp(48px, 8vw, 72px)', width: 'auto', objectFit: 'contain', maxWidth: '260px' }}
             />
           </a>
 

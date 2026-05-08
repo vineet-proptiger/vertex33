@@ -51,12 +51,12 @@ const Hero = ({ setIsOpen }) => {
       {/* ── Dark gradient overlay ── */}
       <div style={{
         position: 'absolute', inset: 0, zIndex: 1,
-        background: 'linear-gradient(to top, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.15) 50%, rgba(0,0,0,0) 100%)',
+        background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 100%)',
       }} />
 
 
       {/* ── Center-bottom text ── */}
-      <div className="absolute left-0 right-0 bottom-[180px] sm:bottom-[120px]" style={{
+      <div className="absolute left-0 right-0 bottom-[210px] sm:bottom-[120px]" style={{
         zIndex: 2, textAlign: 'center', padding: '0 16px',
       }}>
         {/* Project Tagline */}

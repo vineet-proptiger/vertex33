@@ -19,15 +19,7 @@ const Hero = ({ setIsOpen }) => {
   return (
     <section
       id="home"
-      style={{
-        position: 'relative',
-        width: '100%',
-        height: '100vh',
-        minHeight: '560px',
-        overflow: 'hidden',
-        paddingTop: 0,
-        paddingBottom: 0,
-      }}
+      className="relative w-full h-[100svh] min-h-[500px] md:min-h-[600px] overflow-hidden pt-0 pb-0 bg-[#0a1a24]"
     >
       {/* ── Background image carousel ── */}
       {slides.map((src, idx) => (
@@ -44,7 +36,7 @@ const Hero = ({ setIsOpen }) => {
             src={src}
             alt={`Vertex 33 ${idx + 1}`}
             fill
-            className="object-cover"
+            className="object-contain md:object-cover object-top md:object-[center_bottom] scale-[1.15] origin-top md:scale-100 md:origin-center"
             priority={idx === 0}
             sizes="100vw"
             quality={100}

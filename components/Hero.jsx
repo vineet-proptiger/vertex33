@@ -96,7 +96,7 @@ const Hero = ({ setIsOpen }) => {
         {/* Location & Phone */}
         <div style={{
           display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 'clamp(6px, 2vw, 24px)',
-          flexWrap: 'wrap', marginTop: '2px'
+          flexWrap: 'wrap', marginTop: '2px', filter: 'drop-shadow(0 2px 10px rgba(0,0,0,0.7))'
         }}>
           {/* Location */}
           <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>

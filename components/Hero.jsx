@@ -51,7 +51,7 @@ const Hero = ({ setIsOpen }) => {
       }} />
 
       {/* ── Center-bottom text ── */}
-      <div className="absolute left-0 right-0 bottom-40 sm:bottom-[110px]" style={{
+      <div className="absolute left-0 right-0 bottom-[220px] sm:bottom-[120px]" style={{
         zIndex: 2, textAlign: 'center', padding: '0 16px',
       }}>
         {/* Project Tagline */}

@@ -13,7 +13,7 @@ const stats = [
   { value: 'P02400006931', label: 'RERA No.' },
   { value: 'Nallagandla', label: 'Location' },
   { value: '80% Done', label: 'Construction' },
-  { value: '2 & 3 BHK', label: 'Configurations' },
+  { value: '2.5 & 3 BHK', label: 'Configurations' },
   { value: '₹8,299/sq.ft', label: 'Current Rate' },
   { value: '₹1.45 Cr*', label: 'Starting Price' },
 ]
@@ -137,7 +137,7 @@ const Overview = () => (
             fontFamily: F_SANS, fontSize: '14.5px', color: '#444444',
             lineHeight: 1.9, margin: '0 0 32px', textAlign: 'justify',
           }}>
-            Vertex 33 is a premium 2 &amp; 3 BHK residential development at Nallagandla, Gachibowli — Hyderabad&apos;s most coveted IT corridor. With 80% construction completed, near-ready homes are available starting at just ₹1.45 Cr*.
+            Vertex 33 is a premium 2.5 &amp; 3 BHK residential development at Nallagandla, Gachibowli — Hyderabad&apos;s most coveted IT corridor. With 80% construction completed, near-ready homes are available starting at just ₹1.45 Cr*.
             With an EMI holiday till January 2027, book now before the June 1st price revision to ₹8,499/sq.ft.
             Designed as an exclusive low-density development across 2 signature towers, every home features 3 private balconies, glass railings with unlimited views, and a stunning designer facade — a true statement of modern living.
             Residents also enjoy a sprawling podium with 60,000 sq.ft of joyscapes, spacious parking, and world-class amenities — everything you need within your own community.

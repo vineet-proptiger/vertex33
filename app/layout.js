@@ -33,8 +33,8 @@ const nephilm = localFont({
 })
 
 export const metadata = {
-  title: 'Vertex 33 | 2 & 3 BHK Premium Apartments, Nallagandla, Gachibowli, Hyderabad',
-  description: 'Vertex 33 — Premium 2 & 3 BHK apartments at Nallagandla, Gachibowli, Hyderabad. 80% construction completed. Starting ₹1.45 Cr*. Current rate ₹8,299/sq.ft — price hike from June 1st. RERA: P02400006931.',
+  title: 'Vertex 33 | 2.5 & 3 BHK Premium Apartments, Nallagandla, Gachibowli, Hyderabad',
+  description: 'Vertex 33 — Premium 2.5 & 3 BHK apartments at Nallagandla, Gachibowli, Hyderabad. 80% construction completed. Starting ₹1.45 Cr*. Current rate ₹8,299/sq.ft — price hike from June 1st. RERA: P02400006931.',
   icons: {
     icon: faviconImages.icon,
     apple: faviconImages.apple,

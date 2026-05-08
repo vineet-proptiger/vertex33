@@ -205,7 +205,7 @@ const Hero = ({ setIsOpen }) => {
         }}>
           {[
             'New Launch',
-            '2 & 3 BHK Luxury APARTMENTS',
+            '2.5 & 3 BHK Luxury APARTMENTS',
             '₹ 1.45 Cr* ONWARDS',
           ].map((text, i) => (
             <div

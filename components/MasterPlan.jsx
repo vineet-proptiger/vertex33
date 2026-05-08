@@ -8,7 +8,7 @@ const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const plans = [
   { label: 'MASTER PLAN', img: masterplanImages.masterPlan },
-  { label: '2 BHK', img: masterplanImages.floorPlan },
+  { label: '2.5 BHK', img: masterplanImages.floorPlan },
   { label: '3 BHK', img: masterplanImages.floorPlan },
 ]
 

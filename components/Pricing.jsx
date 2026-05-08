@@ -5,8 +5,8 @@ const F_JOST = 'var(--font-jost), Montserrat, sans-serif'
 const F_SANS = 'var(--font-sans), Open Sans, sans-serif'
 
 const rows = [
-  { type: '2 BHK Apartments', size: 'On Request', price: '1.45 Cr' },
-  { type: '3 BHK Apartments', size: 'On Request', price: 'Ask For Price' },
+  { type: '2.5 BHK Apartments', size: 'On Request', price: 'Ask For Price' },
+  { type: '3 BHK Apartments', size: 'On Request', price: '1.45 Cr' },
 ]
 
 const Pricing = ({ setIsOpen }) => (

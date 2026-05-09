@@ -443,6 +443,13 @@
   }
 }
 
+@media (max-width: 767px) {
+  #home {
+    padding-top: 88px !important;
+    padding-bottom: 0 !important;
+  }
+}
+
 /* ─── Navbar (Transparency handled in Navbar.jsx) ────────────── */
 /* nav.fixed {
   background: #1a1a1a !important;

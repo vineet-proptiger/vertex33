@@ -36,7 +36,6 @@ const Highlights = ({ setIsOpen }) => (
             className="object-contain"
             sizes="(max-width:1024px) 100vw, 45vw"
           />
-          <div style={{ position: "absolute", inset: 0, background: "rgba(0,0,0,0.15)" }} />
         </div>
       </div>
 

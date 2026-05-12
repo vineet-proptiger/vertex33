@@ -49,7 +49,7 @@ const Navbar = ({ setIsOpen }) => {
       }}
     >
       <div className="container mx-auto px-4 md:px-8">
-        <div className="flex items-center justify-between h-[88px]">
+        <div className="flex items-center justify-between" style={{ height: isMobile ? '72px' : '88px' }}>
 
           {/* Logo */}
           <a href="#" className="flex items-center shrink-0">

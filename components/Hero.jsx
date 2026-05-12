@@ -169,7 +169,7 @@ const Hero = ({ setIsOpen }) => {
           width: '100%',
         }}>
           {[
-            'Exclusive 2 Towers',
+            'Exclusive 2 Towers Launch',
             '524 units of Vastu-compliant',
             '3 Acres Land Parcel',
           ].map((point, i) => (
@@ -204,8 +204,8 @@ const Hero = ({ setIsOpen }) => {
         }}>
           {[
             { label: 'STATUS', value: 'New Launch' },
-            { label: 'CONFIGURATIONS', value: '2.5 & 3 BHK Luxury APARTMENTS' },
-            { label: 'PRICE', value: '₹ 1.45 Cr* ONWARDS' },
+            { label: 'CONFIGURATIONS', value: '2.5 & 3 BHK Luxury APTS.' },
+            { label: 'PRICE', value: '₹ 1.45 Cr*' },
           ].map((item, i) => (
             <div
               key={i}

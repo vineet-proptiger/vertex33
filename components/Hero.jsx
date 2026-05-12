@@ -24,19 +24,16 @@ const Hero = ({ setIsOpen }) => {
     <section
       id="home"
       className="relative w-full overflow-hidden"
-      style={{ height: isMobile ? 'auto' : '100svh' }}
+      style={{ height: 'auto' }}
     >
       {/* ── Image + text wrapper ──
           Mobile: relative, height = exact image AR (2520×1440 = 1.75:1) → no letterbox gaps
           Desktop: absolute fill of the full-viewport section */}
-      <div style={isMobile ? {
+      <div style={{
         position: 'relative',
         width: '100%',
-        height: 'calc(100vw * 1440 / 2520)',
+        aspectRatio: '2520/1440',
         overflow: 'hidden',
-      } : {
-        position: 'absolute',
-        inset: 0,
       }}>
         {/* Background carousel */}
         {slides.map((src, idx) => (
@@ -72,10 +69,9 @@ const Hero = ({ setIsOpen }) => {
 
         {/* Center-bottom text */}
         <div
-          className={!isMobile ? 'bottom-[210px] sm:bottom-[120px]' : ''}
           style={{
             position: 'absolute', left: 0, right: 0,
-            ...(isMobile && { bottom: '10px' }),
+            bottom: isMobile ? '10px' : '180px',
             zIndex: 2, textAlign: 'center', padding: '0 16px',
           }}
         >
@@ -160,12 +156,8 @@ const Hero = ({ setIsOpen }) => {
       {/* ── Bottom info bar ──
           Mobile: relative, flows naturally right below the image wrapper (zero gap)
           Desktop: absolute, pinned to bottom of the full-viewport section */}
-      <div style={isMobile ? {
+      <div style={{
         position: 'relative',
-        zIndex: 5,
-      } : {
-        position: 'absolute', bottom: 0,
-        left: 0, right: 0,
         zIndex: 5,
       }}>
         {/* USP row */}
@@ -174,8 +166,7 @@ const Hero = ({ setIsOpen }) => {
           backdropFilter: 'blur(8px)',
           display: 'grid', gridTemplateColumns: '1fr 1fr 1fr',
           borderTop: '1px solid rgba(var(--color-gold-rgb),0.35)',
-          maxWidth: '1200px',
-          margin: '0 auto',
+          width: '100%',
         }}>
           {[
             'Exclusive 2 Towers',
@@ -209,22 +200,36 @@ const Hero = ({ setIsOpen }) => {
           borderTop: '1px solid rgba(var(--color-gold-rgb),0.25)',
           boxShadow: isMobile ? 'none' : '0 -10px 40px rgba(7,30,40,0.6)',
           overflow: 'hidden',
-          margin: '0 auto',
-          maxWidth: '1200px',
+          width: '100%',
         }}>
           {[
-            'New Launch',
-            '2.5 & 3 BHK Luxury APARTMENTS',
-            '₹ 1.45 Cr* ONWARDS',
-          ].map((text, i) => (
+            { label: 'STATUS', value: 'New Launch' },
+            { label: 'CONFIGURATIONS', value: '2.5 & 3 BHK Luxury APARTMENTS' },
+            { label: 'PRICE', value: '₹ 1.45 Cr* ONWARDS' },
+          ].map((item, i) => (
             <div
               key={i}
               style={{
                 textAlign: 'center',
                 padding: isMobile ? '10px 8px' : '14px 12px',
                 borderRight: i < 2 ? '1px solid rgba(255,255,255,0.1)' : 'none',
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'center',
+                gap: '2px'
               }}
             >
+              <span style={{
+                fontFamily: F_JOST,
+                fontSize: 'clamp(8px, 1.2vw, 11px)',
+                fontWeight: '600',
+                color: 'var(--color-gold)',
+                letterSpacing: '0.08em',
+                textTransform: 'uppercase',
+                opacity: 0.9
+              }}>
+                {item.label}
+              </span>
               <span style={{
                 fontFamily: F_JOST,
                 fontSize: 'clamp(10px, 1.8vw, 16px)',
@@ -234,7 +239,7 @@ const Hero = ({ setIsOpen }) => {
                 textTransform: 'uppercase',
                 textShadow: '0 1px 4px rgba(0,0,0,0.3)',
               }}>
-                {text}
+                {item.value}
               </span>
             </div>
           ))}

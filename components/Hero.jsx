@@ -61,10 +61,14 @@ const Hero = ({ setIsOpen }) => {
           </div>
         ))}
 
-        {/* Dark gradient overlay */}
+        {/* Dark gradient overlay - limited to bottom text area */}
         <div style={{
-          position: 'absolute', inset: 0, zIndex: 1,
-          background: 'linear-gradient(to top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.55) 45%, rgba(0,0,0,0) 100%)',
+          position: 'absolute', 
+          bottom: 0, left: 0, right: 0,
+          height: isMobile ? '60%' : '45%', 
+          zIndex: 1,
+          background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
+          pointerEvents: 'none'
         }} />
 
         {/* Center-bottom text */}

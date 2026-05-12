@@ -208,7 +208,7 @@ const Hero = ({ setIsOpen }) => {
         }}>
           {[
             { label: 'STATUS', value: 'New Launch' },
-            { label: 'CONFIGURATIONS', value: '2.5 & 3 BHK Luxury APTS.' },
+            { label: 'CONFIGURATIONS', value: '2.5 & 3 BHK Luxury APT.' },
             { label: 'PRICE', value: '₹ 1.45 Cr*' },
           ].map((item, i) => (
             <div

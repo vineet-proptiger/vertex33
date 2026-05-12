@@ -63,11 +63,11 @@ const Hero = ({ setIsOpen }) => {
 
         {/* Dark gradient overlay - limited to bottom text area */}
         <div style={{
-          position: 'absolute', 
+          position: 'absolute',
           bottom: 0, left: 0, right: 0,
-          height: isMobile ? '60%' : '45%', 
+          height: isMobile ? '50%' : '35%',
           zIndex: 1,
-          background: 'linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 100%)',
+          background: 'linear-gradient(to top, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%)',
           pointerEvents: 'none'
         }} />
 

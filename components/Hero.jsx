@@ -79,7 +79,7 @@ const Hero = ({ setIsOpen }) => {
             zIndex: 2, textAlign: 'center', padding: '0 16px',
           }}
         >
-          {/* Project Tagline */}
+          {/* Project Tagline - Commented out as requested
           <div style={{ marginBottom: isMobile ? '6px' : '14px' }}>
             <span style={{
               background: 'rgba(0, 0, 0, 0.5)',
@@ -99,18 +99,26 @@ const Hero = ({ setIsOpen }) => {
               West at Nallagandla
             </span>
           </div>
+          */}
 
           <h1 style={{
+            background: 'rgba(0, 0, 0, 0.5)',
+            border: '2px solid var(--color-gold)',
+            padding: isMobile ? '6px 20px' : '12px 40px',
+            borderRadius: '50px',
             fontFamily: F_JOST,
             fontSize: isMobile ? '18px' : 'clamp(20px, 3.2vw, 46px)',
             fontWeight: '800',
             color: '#ffffff',
-            margin: isMobile ? '0 0 4px' : '0 0 8px',
+            margin: isMobile ? '0 0 8px' : '0 0 16px',
             letterSpacing: '0.04em',
             textTransform: 'uppercase',
             textShadow: '0 2px 20px rgba(0,0,0,0.5)',
+            display: 'inline-block',
+            backdropFilter: 'blur(10px)',
+            boxShadow: '0 4px 20px rgba(0,0,0,0.4)'
           }}>
-            VERTEX 33
+            VERTEX 33 <span style={{ color: 'var(--color-gold)' }}>WEST</span>
           </h1>
 
           {/* Location & Phone */}
